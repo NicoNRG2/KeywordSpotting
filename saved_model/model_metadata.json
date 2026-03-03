@@ -1,0 +1,23 @@
+{
+  "class_names": [
+    "heynano",
+    "on",
+    "off",
+    "_background_"
+  ],
+  "label2idx": {
+    "heynano": 0,
+    "on": 1,
+    "off": 2,
+    "_background_": 3
+  },
+  "sample_rate": 16000,
+  "duration": 1.0,
+  "n_mfcc": 40,
+  "hop_length": 512,
+  "n_fft": 2048,
+  "input_shape": [
+    32,
+    40
+  ]
+}
