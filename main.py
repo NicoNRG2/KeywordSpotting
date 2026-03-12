@@ -30,9 +30,9 @@ OUTPUT_DIR    = "./saved_model"
 
 SAMPLE_RATE   = 16000
 DURATION      = 1.0
-N_MFCC        = 40
-HOP_LENGTH    = 512
-N_FFT         = 2048
+N_MFCC        = 13
+HOP_LENGTH    = 320
+N_FFT         = 512
 
 EPOCHS        = 50
 BATCH_SIZE    = 32
@@ -93,7 +93,10 @@ def load_audio(file_path):
 def extract_mfcc(audio):
     mfcc = librosa.feature.mfcc(
         y=audio, sr=SAMPLE_RATE,
-        n_mfcc=N_MFCC, hop_length=HOP_LENGTH, n_fft=N_FFT,
+        n_mfcc=N_MFCC,
+        n_mels=32,  
+        hop_length=HOP_LENGTH,
+        n_fft=N_FFT,
     )
     mfcc = (mfcc - mfcc.mean(axis=1, keepdims=True)) / (mfcc.std(axis=1, keepdims=True) + 1e-8)
     return mfcc.T  # (time_frames, N_MFCC)
