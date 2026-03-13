@@ -74,6 +74,7 @@ testing con augmentation ------> accuracy  77.46
 
 PYTHON
 test con modello con augmentation 0.45 ---> 83.73
+test con modello con augmentation 0.2 ---> 85.76
 test con modello con augmentation 0.1 ---> 85.42
 test con modello senza augmentation ---> 84.9
 
