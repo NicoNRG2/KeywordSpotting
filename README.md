@@ -8,6 +8,15 @@ The pipeline includes:
 3. Neural network training for keyword classification
 4. Deployment on an embedded microcontroller
 
+## Video demo
+<p align="center">
+  <a href="https://www.youtube.com/shorts/y28ZhxwPF1U">
+    <img src="docs/cover.png"
+         alt="Keyword Spotting Low Power Demo"
+         style="width:30%; max-width:30%;" />
+  </a>
+</p>
+
 ## Requirements
 This project was developed using:
 - Python 3.12.10
@@ -60,4 +69,4 @@ Different **neural network architectures** are trained to classify the extracted
 The final trained model is optimized for deployment on an embedded device such as the Arduino Nano 33 BLE Sense Rev2.
 
 ## Report
-Click the link to view the final [Report](Report_low_power.pdf)
+Click the link to view the final [Report](docs/Report_low_power.pdf)
