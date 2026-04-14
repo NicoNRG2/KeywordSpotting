@@ -4,7 +4,7 @@ The final goal is to deploy the trained model on an embedded device such as the 
 
 The pipeline includes:
 1. Audio data collection
-2. Feature extraction using MFCC
+2. Feature extraction using LFBE
 3. Neural network training for keyword classification
 4. Deployment on an embedded microcontroller
 
@@ -39,34 +39,27 @@ Install TensorFlow (CPU version):
 ```bash
 pip install tensorflow
 ```
+Install all dependencies:
+```bash
+pip install -r requirements.txt   
+```
+
 ## Getting Started
 Clone the repository:
 ```bash
 git clone https://github.com/NicoNRG2/KeywordSpotting.git
 cd KeywordSpotting
 ```
-After setting up the environment, you can start working directly from the provided Jupyter notebook, which contains the main experimentation pipeline.
+After setting up the environment, you can start working directly from the provided Jupyter notebook "KWS_LowPower.ipynb", which contains the main experimentation pipeline.
 
-## Project Pipeline
-
-The keyword spotting workflow follows these main steps:
-
-### 1. Audio Data Collection
-Audio samples are recorded as **WAV files** with the following specifications:
-
-- Duration: **1 second**
-- Sampling rate: **16 kHz**
-
-These samples represent the spoken keywords used for training.
-
-### 2. Feature Extraction
-The audio signals are processed using **Mel-Frequency Cepstral Coefficients (MFCC)** to extract meaningful features from the waveform.
-
-### 3. Model Training
-Different **neural network architectures** are trained to classify the extracted features and recognize the target keywords.
-
-### 4. Embedded Deployment
-The final trained model is optimized for deployment on an embedded device such as the Arduino Nano 33 BLE Sense Rev2.
+## Deployment on Arduino nano 33 ble sense rev2
+### Install TensorFlow Lite Micro Library
+Inside Arduino libraries folder on your system type:
+```bash
+git clone https://github.com/tensorflow/tflite-micro-arduino-examples Arduino_TensorFlowLite
+```
+### Compile and upload sketch
+Open and upload on Arduino IDE the sketch heynano_voice_control in this repository.
 
 ## Report
 Click the link to view the final [Report](docs/Report_low_power.pdf)
