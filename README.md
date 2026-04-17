@@ -35,10 +35,6 @@ Upgrade pip:
 ```bash
 python -m pip install --upgrade pip
 ```
-Install TensorFlow (CPU version):
-```bash
-pip install tensorflow
-```
 Install all dependencies:
 ```bash
 pip install -r requirements.txt   
