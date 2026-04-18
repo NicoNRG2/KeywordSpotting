@@ -23,13 +23,19 @@ This project was developed using:
 - TensorFlow (CPU version)
 
 ## Environment Setup
-On Windows, create and activate a virtual environment with Python 3.12:
+Clone the repository:
 ```bash
-py -3.12 -m venv venv
+git clone https://github.com/NicoNRG2/KeywordSpotting.git
+cd KeywordSpotting
+```
+### Windows 11
+Create and activate a virtual environment with Python 3.12:
+```bash
+py -3.12 -m venv .venv
 ```
 Activate the virtual environment:
 ```bash
-.\venv\Scripts\activate
+.\.venv\Scripts\activate
 ```
 Upgrade pip:
 ```bash
@@ -37,25 +43,40 @@ python -m pip install --upgrade pip
 ```
 Install all dependencies:
 ```bash
-pip install -r requirements.txt   
+pip install -r requirements.txt
 ```
-
-## Getting Started
-Clone the repository:
+### Ubuntu 24.04
+Create and activate a virtual environment with Python 3.12:
 ```bash
-git clone https://github.com/NicoNRG2/KeywordSpotting.git
-cd KeywordSpotting
+python3 -m venv .venv
 ```
-After setting up the environment, you can start working directly from the provided Jupyter notebook "KWS_LowPower.ipynb", which contains the main experimentation pipeline.
+Activate the virtual environment:
+```bash
+source .venv/bin/activate
+```
+Upgrade pip:
+```bash
+python -m pip install --upgrade pip
+```
+Install all dependencies:
+```bash
+pip install -r requirements.txt
+```
+## Getting Started
+After setting up the environment, you can start working directly from the provided Jupyter notebook **KWS_LowPower.ipynb**, which contains the main experimentation pipeline.
+
+To create the dataset, we used EdgeImpulse to record 20-30 second audio clips and then used the auto-slice feature to obtain 1 second samples.
 
 ## Deployment on Arduino nano 33 ble sense rev2
 ### Install TensorFlow Lite Micro Library
+For reference, see here: https://github.com/tensorflow/tflite-micro-arduino-examples 
+
 Inside Arduino libraries folder on your system type:
 ```bash
 git clone https://github.com/tensorflow/tflite-micro-arduino-examples Arduino_TensorFlowLite
 ```
 ### Compile and upload sketch
-Open and upload on Arduino IDE the sketch heynano_voice_control in this repository.
+Open and upload on Arduino IDE the sketch **heynano_voice_control** in this repository.
 
 ## Report
 Click the link to view the final [Report](docs/Report_low_power.pdf)
