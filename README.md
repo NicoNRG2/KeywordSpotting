@@ -79,4 +79,4 @@ git clone https://github.com/tensorflow/tflite-micro-arduino-examples Arduino_Te
 Open and upload on Arduino IDE the sketch **heynano_voice_control** in this repository.
 
 ## Report
-Click the link to view the final [Report](docs/Report_low_power.pdf)
+Click the link to view the final [Report](docs/Two_Stage_Wake_Word_System_for_Keyword_Spotting.pdf)
